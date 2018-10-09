@@ -1,0 +1,55 @@
+/* 
+		_footer.scss
+*/
+
+/*
+										---FOOTER---
+*/
+
+
+
+#footer{
+	position: relative;
+	//color: rgba(black, 0.4);
+	//min-height: 150px;
+	line-height: 170%;
+	background-repeat: no-repeat;
+	background-position-y: center;
+	background-size: cover;
+}
+.footer-content{
+	.pie-flex-content{
+		flex-wrap: nowrap;
+		@media (max-width: 991px) {
+			flex-wrap: wrap;
+		}
+	}
+}
+
+.dev{
+	font-size: 0.9em;
+}
+
+@keyframes footerlogo {
+  from {
+  	filter: drop-shadow(-1px -5px 0px rgba($color-1, 0.3) ) drop-shadow(-1px 5px 0px rgba($color-2, 0.1) );
+  }
+  50% {
+   filter: drop-shadow(-5px 5px 0px rgba($color-1, 0.1) ) drop-shadow(8px -5px 0px rgba($color-2, 0.3) );
+  }
+  to {
+    filter: drop-shadow(-1px -5px 0px rgba($color-1, 0.2) ) drop-shadow(-1px 5px 0px rgba($color-2, 0.2) );
+  }
+}
+.footer-logo{
+	img{
+		transition: all 0.3s ease;
+		//filter: drop-shadow(0px 0px 0px rgba($color-1, 0.2) ) drop-shadow(0px 0px 0px rgba($color-2, 0.2) );
+		filter: drop-shadow(0px 0px 3px rgba(black, 0.0) );
+		&:hover{
+		 //filter: drop-shadow(0px -15px 0px rgba($color-1, 0.4) ) drop-shadow(0px 15px 0px rgba($color-2, 0.4) );
+		 filter: drop-shadow(0px 0px 3px rgba(black, 0.8) );
+			//animation: footerlogo 3.5s linear infinite;
+		}
+	}
+}
