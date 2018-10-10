@@ -6,37 +6,43 @@
 
 
 
-//-----------------------------PADD
+
+
+/* padding */
 html{
-	
+	@for $i from 0 through 24 {
+		.p-h-#{5*$i} { 
+			padding-left: 5*$i+px;
+			padding-right: 5*$i+px;}}
 
-@for $i from 0 through 24 {
-	.p-h-#{5*$i} { 
-		padding-left: 5*$i+px;
-		padding-right: 5*$i+px;}}
+	@for $i from 0 through 24 {
+		.p-v-#{5*$i} { 
+			padding-top: 5*$i+px;
+			padding-bottom: 5*$i+px;}}
 
-@for $i from 0 through 24 {
-	.p-v-#{5*$i} { 
-		padding-top: 5*$i+px;
-		padding-bottom: 5*$i+px;}}
+	@for $i from 0 through 24 {
+		.p-t-#{5*$i} { 
+			padding-top: 5*$i+px;}}
 
-@for $i from 0 through 24 {
-	.p-t-#{5*$i} { 
-		padding-top: 5*$i+px;}}
+	@for $i from 0 through 24 {
+		.p-b-#{5*$i} { 
+			padding-bottom: 5*$i+px;}}
 
-@for $i from 0 through 24 {
-	.p-b-#{5*$i} { 
-		padding-bottom: 5*$i+px;}}
+	@for $i from 0 through 24 {
+		.p-l-#{5*$i} { 
+			padding-left: 5*$i+px;}}
 
-@for $i from 0 through 24 {
-	.p-l-#{5*$i} { 
-		padding-left: 5*$i+px;}}
-
-@for $i from 0 through 24 {
-	.p-r-#{5*$i} { 
-		padding-right: 5*$i+px;}}
+	@for $i from 0 through 24 {
+		.p-r-#{5*$i} { 
+			padding-right: 5*$i+px;}}
+	.p-0{ padding: 0;}
 }
-//------------------------MARG
+
+
+
+
+
+/* margin */
 @for $i from 0 through 24 {
 	.m-h-#{5*$i} { 
 		margin-left: 5*$i+px;
@@ -63,6 +69,7 @@ html{
 	.m-r-#{5*$i}) { 
 		margin-right: 5*$i+px;}}
 
+.m-0{margin: 0;}
 
 .m-auto{
 	margin-left: auto;
@@ -82,9 +89,10 @@ html{
 }
 
 
-//--------------------Parag-MARGIN
 
 
+
+/* parag margin */
 @for $i from 0 through 4 {
 	.parag-m-h-#{5*$i} { 
 		p{
@@ -107,55 +115,13 @@ html{
 
 
 
-.m-0{
-	margin: 0;
-	
-}
-.p-0{
-	padding: 0;
-}
-
-//--------------------Figure-MARGIN
-@for $i from 0 through 12{
-	.pie-xs-flex-#{$i} {
-		flex-basis: ( ($i*100) /12)+%;
-	}
-}
-
-@media (min-width:768px){
-	@for $i from 0 through 12{
-		.pie-sm-flex-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
-		}
-	}
-}
-
-@media (min-width:992px){
-	@for $i from 0 through 12{
-		.pie-md-flex-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
-		}
-	}
-}
-
-
-@media (min-width:1200px){
-	@for $i from 0 through 12{
-		.pie-lg-flex-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
-		}
-	}
-}
-
-
+/* figure margin */
 @for $i from 0 through 12 {
 	.figure-m-v-#{5*$i} { 
-
 		figure{
 			margin-top: 5*$i+px;
 			margin-bottom: 5*$i+px;
 		}
-	 	
 	}
 }
 @for $i from 0 through 12 {
@@ -168,25 +134,20 @@ html{
 	}
 }
 
-@for $i from 0 through 8 {
-	.li-m-v-#{5*$i} { 
-		li{
-			margin-top: 5*$i+px;
-			margin-bottom: 5*$i+px;
-		}
-	 	
-	}
-}
-@for $i from 0 through 8 {
-	.li-m-r-#{5*$i} { 
-		li{
-			margin-right: 5*$i+px;
-		}
-	 	
-	}
-}
 
-//--BOX
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOX */
 @for $i from 0 through 10 {
 	.box-xs-#{$i} { 
 		width: 10*$i+%;
@@ -219,24 +180,174 @@ html{
 
 
 
+
+
+
+
+
+// FLEX
+.flex-content{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	position: relative;
+}
+.flexalign-i-center{
+	display: flex;
+	flex: 1 1;
+	align-items: center;
+	//height: inherit;
+	&>div:not([class*="box-"]):not([class*="col-"]), &>.this-flex{
+		width: 100%;
+	}
+}
+[class*='align-i']{
+	display: flex;
+}
+.align-i-center{
+	align-items: center;
+	&>span, &>b{
+		width: 100%;
+		text-align: center;
+		display: block;
+	}
+	@media (max-width: 991px) {
+		.align-i-center{
+			flex-direction: column;
+			height: auto;
+		}
+	}
+}
+.align-i-end{
+	align-items: flex-end;
+}
+.flex-def{
+	display: flex;
+	@media (max-width: 991px ) {
+		flex-direction: column;	
+	}
+	& > div, & > figure:not([class*="box-"]):not([class*="col-"]){
+		width: 100%;
+	}
+}
+.justify-c-center{ justify-content: center; }
+.justify-c-between{ justify-content: space-between; }
+
+
+
+@for $i from 0 through 12{
+	.flexbasis-xs-#{$i} {
+		flex-basis: ( ($i*100) /12)+%;
+	}
+}
+
+@media (min-width:768px){
+	@for $i from 0 through 12{
+		.flexbasis-sm-#{$i} {
+			flex-basis: ( ($i*100) /12)+%;
+		}
+	}
+}
+
+@media (min-width:992px){
+	@for $i from 0 through 12{
+		.flexbasis-md-#{$i} {
+			flex-basis: ( ($i*100) /12)+%;
+		}
+	}
+}
+
+
+@media (min-width:1200px){
+	@for $i from 0 through 12{
+		.flexbasis-lg-#{$i} {
+			flex-basis: ( ($i*100) /12)+%;
+		}
+	}
+}
+
+
+
+
+
+/* flexboxes */
+[class*='flexboxes']{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	figure, .flexboxes-item{
+		display: inline-block;
+	}
+	&:not(.serried){
+		margin-left: -15px;
+		margin-right: -15px;
+		figure, .flexboxes-item{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+@for $i from 0 through 8{
+	.flexboxes-#{$i}{
+		figure, .flexboxes-item{
+			flex-basis: (100/$i)+%;
+		}
+	}
+}
+
+@media ( max-width:991px ){
+	.flexboxes-2{
+		figure, .flexboxes-item{
+			flex-basis: (100/1)+%;
+		}
+	}
+	.flexboxes-3, .flexboxes-4, .flexboxes-5{
+		figure, .flexboxes-item{
+			flex-basis: (100/2)+%;
+		}
+	}
+	.flexboxes-5, .flexboxes-6{
+		figure, .flexboxes-item{
+			flex-basis: (100/3)+%;
+		}
+	}
+}
+@media ( max-width: 420px ){
+	.flexboxes-3, .flexboxes-4, .flexboxes-5, .flexboxes-5, .flexboxes-6{
+		figure, .flexboxes-item{
+			flex-basis: (100/1)+%;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //--PIE
 
 
 
 
 // PIE CELLS
-
-
 [class*="pie-cells"]{
-
 	margin-left: -15px;
 	margin-right: -15px;
 	letter-spacing: -5px;
 	*{
 		letter-spacing: normal;
 	}
-
-
 	&.left{ text-align: left; }
 	&.center{ text-align: center; }
 	&.right{ text-align: right; }
@@ -255,8 +366,6 @@ html{
 		padding-right: 15px;
 		position: relative;
 	}
-
-
 }
 @for $i from 0 through 12 {
 	.pie-cells-#{$i}{
@@ -271,118 +380,14 @@ html{
 
 
 
-// PIE FLEX
-.pie-flex-content{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	position: relative;
-}
-.pie-flex-center{
-	display: flex;
-	align-items: center;
-	height: inherit;
-	&>div:not([class*="box-"]):not([class*="col-"]), &>.this-flex{
-		width: 100%;
-	}
-}
-[class*='align-items']{
-	display: flex;
-}
-.align-items-center{
-	align-items: center;
-	&>span, &>b{
-		width: 100%;
-		text-align: center;
-		display: block;
-	}
-	@media (max-width: 991px) {
-		.align-items-center{
-			flex-direction: column;
-			height: auto;
-		}
-	}
-}
-.align-items-end{
-	align-items: flex-end;
-}
-
-.flex-def{
-	display: flex;
-	@media (max-width: 991px ) {
-		flex-direction: column;	
-	}
-	& > div, & > figure:not([class*="box-"]):not([class*="col-"]){
-		width: 100%;
-	}
-}
-.pie-flex-justify{
-  justify-content: center;
-  flex: 1 1;
-}
-[class*="pie-xs-flex"], [class*="pie-sm-flex"], [class*="pie-md-flex"], [class*="pie-lg-flex"]{
-	align-self: center;
-}
-
-
-
-@for $i from 0 through 12{
-	.pie-xs-flex-#{$i} {
-		flex-basis: ( ($i*100) /12)+%;
-	}
-}
-
-@media (min-width:768px){
-	@for $i from 0 through 12{
-		.pie-sm-flex-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
-		}
-	}
-}
-
-@media (min-width:992px){
-	@for $i from 0 through 12{
-		.pie-md-flex-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
-		}
-	}
-}
-
-
-@media (min-width:1200px){
-	@for $i from 0 through 12{
-		.pie-lg-flex-#{$i} {
-			flex-basis: ( ($i*100) /12)+%;
-		}
-	}
-}
-
-
-
-@media (min-width:992px){
-	.pie-flex-5 {
-		[class*="pie-flex"]{
-			flex-basis: (100/5)+%;	
-		}		
-	}
-}
-
-
-
-
-
-
 
 // PIE BOOTSTRAP
-
-
-
 @for $i from 0 through 12{
 	.pie-xs-#{$i}{
 		width: ( ($i*100) /12)+%;
 	}
 }
-[class*="pie-xs"]:not([class*="-flex"]){
+[class*="pie-xs"]:not([class*="flexbasis"]){
 	display: table-cell;
 	vertical-align: middle;
 	&.pie-dry{
@@ -393,7 +398,6 @@ html{
 	}
 
 }
-
 @media (min-width:768px){
 	@for $i from 0 through 12{
 		.pie-sm-#{$i}{
@@ -401,7 +405,6 @@ html{
 		}
 	}
 }
-
 @media (min-width:992px){
 	[class*="pie-md"]:not([class*="-flex"]){
 		display: table-cell;
@@ -420,7 +423,6 @@ html{
 		}
 	}
 }
-
 @media (min-width:1200px){
 	[class*="pie-lg"]:not([class*="-flex"]){
 		display: table-cell;
@@ -431,7 +433,6 @@ html{
 				width: max-content;
 			}
 		}
-
 	}
 	@for $i from 0 through 12{
 		.pie-lg-#{$i}{
@@ -473,40 +474,19 @@ html{
 
 
 
-.text-center{
-	text-align: center;
-}
-.text-left{
-	text-align: left;
-}
-.text-right{
-	text-align: right;
-}
-
-.text-center-impt{
-	text-align: center !important;
-}
-.text-left-impt{
-	text-align: left !important;
-}
-.text-right-impt{
-	text-align: right !important;
-}
 
 
 
 
-.float-none{
-	float: none;
+@for $i from 0 through 8 {
+	.li-m-v-#{5*$i} { 
+		li{
+			margin-top: 5*$i+px;
+			margin-bottom: 5*$i+px;
+		}
+	 	
+	}
 }
-.float-left{
-	float: left;
-}
-.float-right{
-	float: right;
-}
-
-
 @for $i from 0 through 9 {
 	.font-w-#{1*$i} { 
 		font-weight: 100*$i;
@@ -530,6 +510,38 @@ html{
 
 
 
+
+
+
+.text-center{
+	text-align: center;
+}
+.text-left{
+	text-align: left;
+}
+.text-right{
+	text-align: right;
+}
+
+.text-center-impt{
+	text-align: center !important;
+}
+.text-left-impt{
+	text-align: left !important;
+}
+.text-right-impt{
+	text-align: right !important;
+}
+
+.float-none{
+	float: none;
+}
+.float-left{
+	float: left;
+}
+.float-right{
+	float: right;
+}
 
 
 @media (max-width: 991px){

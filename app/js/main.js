@@ -170,7 +170,7 @@
 
 		/*bnr-carousel*/
 		if( $(".bnr-carousel .carousel-items figure").length ){
-			window.bnrCarousel = $(".bnr-carousel .carousel-items").flickity({
+			window.bnrCarousel = $(".bnr-carousel").children(".carousel-items").flickity({
 				imagesLoaded: true,
 				autoPlay: 4500,
 				pauseAutoPlayOnHover: true,
@@ -211,40 +211,42 @@
 		$(".bnr-carousel .carousel-items").append("<div class='container container-arrows'></div>").find(".container-arrows").append($(".bnr-carousel .carousel-items .flickity-prev-next-button"))
 		
 
-		$('.short-trip-carousel .carousel-items').flickity({
-      imagesLoaded: true,
-      autoPlay: 3000,
-      freeScroll: false,
-      pauseAutoPlayOnHover: true,
-      arrowShape: "M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z",
-      initialIndex: 1,
-      prevNextButtons: true,
-      draggable: false,
-      adaptiveHeight: true, 
-      wrapAround: false,
-      pageDots: false,
-      contain: false,
-      percentPosition: true,
-      cellAlign: 'center'
-    });
 
-  	$('.short-guide-carousel .carousel-items').flickity({
-      imagesLoaded: true,
-      autoPlay: 3000,
-      freeScroll: false,
-      pauseAutoPlayOnHover: true,
-      arrowShape: "M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z",
-      initialIndex: 1,
-      prevNextButtons: true,
-      draggable: false,
-      adaptiveHeight: true, 
-      wrapAround: false,
-      pageDots: false,
-      contain: false,
-      percentPosition: true,
-      cellAlign: 'center'
-    });
-  
+		if( $('.productions-carousel .carousel-items figure').length > 6 )
+	  	$('.productions-carousel .carousel-items').flickity({
+	      imagesLoaded: true,
+	      autoPlay: 3000,
+	      freeScroll: false,
+	      pauseAutoPlayOnHover: true,
+	      arrowShape: "M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z",
+	      initialIndex: Math.floor($('.productions-carousel .carousel-items figure').length/2),
+	      prevNextButtons: true,
+	      pageDots: false,
+	      percentPosition: true,
+	      draggable: false,
+	      adaptiveHeight: true, 
+	      wrapAround: false,
+	      contain: false,
+	      cellAlign: 'center'
+	    });
+  	if($('.short-trip-carousel .carousel-items figure').length > 4)
+			$('.short-trip-carousel .carousel-items').flickity({
+	      imagesLoaded: true,
+	      autoPlay: 3000,
+	      freeScroll: false,
+	      pauseAutoPlayOnHover: true,
+	      arrowShape: "M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z",
+	      initialIndex: 0,
+	      prevNextButtons: true,
+	      draggable: false,
+	      adaptiveHeight: true, 
+	      wrapAround: true,
+	      pageDots: false,
+	      contain: false,
+	      percentPosition: true,
+	      cellAlign: 'center'
+	    });
+
     $('.galleryvideo-carousel .carousel-items').map(function(i, el) {
       var fct = $(el).flickity({
         imagesLoaded: true,

@@ -7,7 +7,7 @@
 										 ---HEADER---
 */
 
-$header-top-height: 100px; 
+$header-top-height: 130px; 
 $header-middle-height: 145px; 
 $header-bottom-height: 85px;
 $header-min-menu: 70px;
@@ -62,7 +62,7 @@ $header-min-menu: 70px;
 
 .header-hidden{
 	//position: relative;
-	height: 170px;
+	height: $header-top-height;
 	background-color: transparent;
 	transition: height 0.3s ease-in-out 0.4s;
 	display: none;
@@ -73,7 +73,7 @@ $header-min-menu: 70px;
 }
 .header-offset{
 	.img{
-		height: 170px;
+		height: $header-top-height;
 		width: 100%;
 		background-position: center;
 		background-size: cover;
@@ -88,7 +88,7 @@ $header-min-menu: 70px;
 	}
 }
 .header-top-content{
-	height: 170px;
+	height: $header-top-height;
 }
 .header-top, .header-bottom{
 	transform: inherit;transform: unset;
@@ -105,7 +105,7 @@ $header-min-menu: 70px;
 	padding-top: 5px;
   padding-bottom: 5px;	
 	img{
-		width: 162px;
+		width: 100px;
 	}
 }
 .header-scroll{
@@ -126,7 +126,7 @@ $header-min-menu: 70px;
 		}
 		.header-logo{
 			img{
-				width: 25%;
+				width: 60%;
 			}
 		}
 		.header-bottom{
@@ -164,7 +164,7 @@ $header-min-menu: 70px;
 			display: inline-block;
 			position: relative;
 			letter-spacing: 0;
-			font-size: 1em;
+			font-size: 0.9em;
 			& > a{
 				display: block;
 				padding: 15px 10px;
@@ -203,7 +203,7 @@ $header-min-menu: 70px;
 			&:before, &:after{
 				@extend .claf;
 				z-index: -1;
-				height: 2px;
+				height: 1px;
 				transform: scaleX(0);
 				transition: all 0.3s ease;
 				background-color: $color-2;
@@ -216,9 +216,8 @@ $header-min-menu: 70px;
 			}
 		}
 		a:hover{
-			color: $color-1;
 			&:before, &:after{
-				transform: scaleX(0.8);
+				transform: scaleX(0.5);
 			}
 		}
 
@@ -409,7 +408,7 @@ ul[class*="sub"]{
 		img{
 			opacity: 1;
 			filter: drop-shadow( 0 -5px 1px darken($color-1, 5%) );
-			width:110px;
+			width:100px;
 			margin-top: 15px;
 		}
 	}
@@ -418,7 +417,7 @@ ul[class*="sub"]{
 // ---MODAL---
 .modal{
 	@media(max-width:991px ) {
-		.pie-flex-center{
+		.flexalign-i-center{
 			display: block;
 		}
 	}

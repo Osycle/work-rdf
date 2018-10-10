@@ -4,14 +4,14 @@
 		--Variables--
 */
 
-$color-1: #f7ab39 !default;
-$color-2: #fad233 !default;
+$color-1: #e09218 !default;
+$color-2: #373435 !default;
 $color-3: #d86200 !default;
 $color-4: #fe841f !default;
 $color-5: #2F2F2F !default;
 $color-special-1: #8bc34a;
 
-$font-family-1: "Raleway";
+$font-family-1: "Open Sans";
 $font-family-2: "Open Sans";
 $font-family-3: "sans-serif";
 
@@ -489,77 +489,7 @@ table {
 	}
 }
 
-[class*='flexboxes']{
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	flex-wrap: wrap;
-	figure, .flexboxes-item{
-		display: inline-block;
-	}
-	&:not(.serried){
-		margin-left: -15px;
-		margin-right: -15px;
-		figure, .flexboxes-item{
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-	}
-}
-.flexboxes-1{
-	figure, .flexboxes-item{
-		flex-basis: (100/1)+%;
-	}
-}
-.flexboxes-2{
-	figure, .flexboxes-item{
-		flex-basis: (100/2)+%;
-	}
-}
-.flexboxes-3{
-	figure, .flexboxes-item{
-		flex-basis: (100/3)+%;
-	}
-}
-.flexboxes-4{
-	figure, .flexboxes-item{
-		flex-basis: (100/4)+%;
-	}
-}
-.flexboxes-5{
-	figure, .flexboxes-item{
-		flex-basis: (100/5)+%;
-	}
-}
-.flexboxes-6{
-	figure, .flexboxes-item{
-		flex-basis: (100/6)+%;
-	}
-}
-@media ( max-width:991px ){
-	.flexboxes-2{
-		figure, .flexboxes-item{
-			flex-basis: (100/1)+%;
-		}
-	}
-	.flexboxes-3, .flexboxes-4, .flexboxes-5{
-		figure, .flexboxes-item{
-			flex-basis: (100/2)+%;
-		}
-	}
-	.flexboxes-5, .flexboxes-6{
-		figure, .flexboxes-item{
-			flex-basis: (100/3)+%;
-		}
-	}
-}
-@media ( max-width: 420px ){
-	.flexboxes-3, .flexboxes-4, .flexboxes-5, .flexboxes-5, .flexboxes-6{
-		figure, .flexboxes-item{
-			flex-basis: (100/1)+%;
-		}
-	}
-}
+
 .cell-hover{
 	opacity: 0;
 	padding: 0 5%;
@@ -639,7 +569,7 @@ table {
 .btn-style{
 	display: inline-block;
 	white-space: nowrap;
-	//border-radius: 20px;
+	border-radius: 5px;
 	text-transform: uppercase;
 	text-align: center;	
 	font-weight: 600;
@@ -981,9 +911,9 @@ h1, h2, h3, h4{
 h1{
 	line-height: 125%;
 	text-transform: uppercase;
-	font-size: em(28, 15);
+	font-size: em(32, 15);
 	margin-bottom: 15px;
-	font-weight: 700;
+	font-weight: 600;
 	@media (max-width: 430px) {
 		font-size: em(33/1.2, 15);
 	}
@@ -1009,7 +939,8 @@ h4{
 }
 h5{	
 	line-height: 150%;
-	font-weight: 700;
+	font-weight: 600;
+	text-transform: uppercase;
 	font-size: em(15, 15);
 }
 
