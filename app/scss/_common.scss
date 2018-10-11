@@ -6,8 +6,8 @@
 
 $color-1: #e09218 !default;
 $color-2: #373435 !default;
-$color-3: #d86200 !default;
-$color-4: #fe841f !default;
+$color-3: #40a2db !default;
+$color-4: #db4047 !default;
 $color-5: #2F2F2F !default;
 $color-special-1: #8bc34a;
 
@@ -18,12 +18,12 @@ $font-family-3: "sans-serif";
 $color-scroll: $color-1;
 $color-footer: #0071BC;
 
-$color-gray_1: #E1E1E1;
-$color-gray_2: #b2b2b2;
-$color-gray_3: #757575;
+$color-gray-1: #E1E1E1;
+$color-gray-2: #b2b2b2;
+$color-gray-3: #757575;
 
 $bg-color-black: #000;
-$bg-color-gray: #f0f0f0;
+$bg-color-gray: #363636;
 
 
 
@@ -432,21 +432,23 @@ table {
 	position: absolute;
 }
 
-[class*="boxes"]{	
+[class*="boxes"]:not([class*="flexboxes"]){	
 	//text-align: center;
 	&:not(.boxes-nosub)>.boxes-cell, &>figure{
 		display: inline-table;
-		&:not([class|='va']){
-			vertical-align: top;
-		}
-			
+		vertical-align: top;
 		.img-content{
-			@include img-auto-adaptive();
-			img:not([width]){
-				width: 100%;
-			}
+			//@include img-auto-adaptive();
+			// img:not([width]){
+			// 	width: 100%;
+			// }
 		}
-	}		
+	}
+	&.vam{
+		figure{
+			vertical-align: middle;
+		}
+	}
 }
 
 .boxes-1{
@@ -905,7 +907,7 @@ h1,h2,h3,h4,h5{
 h1, h2, h3, h4{
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-weight: 700;
+	font-weight: 600;
 	position: relative;	
 }
 h1{

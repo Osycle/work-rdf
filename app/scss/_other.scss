@@ -9,67 +9,6 @@
 
 
 
-// ---REV---
-
-// .tparrows{
-// 	background-position: 0 -1px;
-// 	background-image: none !important;
-// 	&.tp-rightarrow{
-// 		//transform: rotate(180deg);
-// 	}
-// 	&.tp-leftarrow{
-// 		transform: rotate(180deg);
-// 	}
-
-// 	svg{
-// 		//stroke: white;
-// 		//stroke-width: 5px;
-// 		fill: $color-1;
-// 		transition:all 0.3s ease-in-out;
-// 	}
-// 	&:hover{
-// 		svg{
-// 			fill: $color-3;
-// 		}
-// 	}
-// }
-// html body{
-	
-// 	.tp-bullets.simplebullets.round .bullet{
-// 		background-image: none;
-// 		background-color: rgba( $color-1, 1 );
-// 	  border: 1px solid transparent;
-// 	  //transform: scale(0.8);
-// 	  width: 12px;
-// 	  height: 12px;
-// 	  border-radius: 50%;
-// 	  margin-left: 14px;
-// 	  transition: all 0.1s ease-in-out;
-// 	  &:hover, &.selected{
-// 	  	background-color: rgba( $color-1, 0.0 );
-// 	  	border-color: $color-1;
-// 	  	transform: scale(1.6);
-// 	  	&:before{
-// 	  		color: $color-1;
-// 	  		opacity: 0.8;
-// 	  	}
-// 	  }
-// 	  &:first-child{
-// 	  	margin-left: 0;
-// 	  }
-// 	  &:before{
-// 	  	@extend .claf;
-// 	  	opacity: 0.5;
-// 	  	text-align: center;
-// 	  	transition: all 0.2s ease-in-out 0.1s;
-// 	  	color: $color-2;
-// 	  	font-size: 0.9em;
-// 	  	top: 100%;
-// 	  }
-
-// 	}
-// }
-
 
 
 
@@ -190,21 +129,19 @@
 		background: transparent;
 		transition: all 0.3s ease;
 		top: 50%;
-		width: 40px;
-		height: 40px;
+		width: 20px;
+		height: 20px;
 		z-index:2;
 		border-radius: 0;
-		border: 1px solid $color-gray_2;
+		//border: 1px solid $color-gray_2;
 		transform: translateY(-50%) scale(1);
 		&:hover, &:focus{
-			background-color: $color-1;
-			border-color: $color-1;
 			.arrow{
-				fill: white;
+				fill: $color-1;
 			}
 		}
 		.arrow{
-			fill: $color-gray_2;
+			fill: white;
 		}
 
 		svg{
@@ -213,23 +150,15 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			transform: scale(0.5);
+			display: flex;
+			align-items: center;
+			transform: scale(1);
 		}
-		.previous{
+		&.previous{
 			left: 0;
 		}
-		.next{
+		&.next{
 			right: 0;
-			svg{
-				top: 0px;
-			}
-		}
-		@media (max-width: 991px) {
-			background-color: $color-1;
-			border-color: $color-1;
-			.arrow{
-				fill: white;
-			}
 		}
 		@media ( min-width: 992px ){
 			&.previous{
