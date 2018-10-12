@@ -43,6 +43,24 @@ html{
 
 
 /* margin */
+.m-auto{
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (max-width:991px){
+	.m-auto-sm{	
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@media (min-width:992px){
+	.m-auto-md{	
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
 @for $i from 0 through 24 {
 	.m-h-#{5*$i} { 
 		margin-left: 5*$i+px;
@@ -70,23 +88,6 @@ html{
 		margin-right: 5*$i+px;}}
 
 .m-0{margin: 0;}
-
-.m-auto{
-	margin-left: auto;
-	margin-right: auto;
-}
-@media (max-width:991px){
-	.m-auto-sm{	
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-@media (min-width:992px){
-	.m-auto-md{	
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
 
 
 
@@ -197,6 +198,10 @@ html{
 }
 [class*='align-i-center']{
 	align-items: center;
+	&>div{
+		display: inline-block;
+	}
+	flex: 1 1;
 	 flex-wrap: wrap;
 }
 .align-i-end{

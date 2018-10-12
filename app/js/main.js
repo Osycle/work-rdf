@@ -70,13 +70,13 @@
 		//MIN-MENU
 		$("#min-menu").mmenu({
 			extensions: [
-				"pagedim-black", // wrapper-bg black
-				"theme-white",
+				"wrapper-bg", // wrapper-bg black
+				"theme-dark",
 				//"theme-white",
 				//"fullscreen",
-				//"listview-50",
-				//"fx-panels-slide-up",
-				//"fx-listitems-drop",
+				"listview-50",
+				"fx-panels-slide-up",
+				"fx-listitems-drop",
 				"border-offset",
 				"position-front",
 				"position-right"

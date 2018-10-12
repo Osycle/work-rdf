@@ -8,8 +8,8 @@ $color-1: #e09218 !default;
 $color-2: #373435 !default;
 $color-3: #40a2db !default;
 $color-4: #db4047 !default;
-$color-5: #2F2F2F !default;
-$color-special-1: #8bc34a;
+$color-5: #e3a600 !default;
+$color-special-1: #2e1c11;
 
 $font-family-1: "Open Sans";
 $font-family-2: "Open Sans";
@@ -423,10 +423,10 @@ table {
 }
 .claf{
 	@extend .fuller;
-	content: "";
+	content: " ";
 }
 .clafclear{
-	content: "";
+	content: " ";
 	height: 100%;
 	width: 100%;
 	position: absolute;
@@ -692,7 +692,7 @@ table {
 	.pagination{
 		li{
 			display: inline-block;
-			//border-radius: 5%;
+			border-radius: 5px;
 			//margin: 0 3px;
 			margin-right: 5px;
 			margin-top: 5px;
@@ -710,10 +710,6 @@ table {
 			}
 			&:hover{
 				transform: scale(0.9);
-				border-radius: 0;
-				a{
-					color: $color-2;
-				}
 			}
 			&.active{
 				background-color: $color-4;
@@ -943,7 +939,7 @@ h5{
 	line-height: 150%;
 	font-weight: 600;
 	text-transform: uppercase;
-	font-size: em(15, 15);
+	font-size: em(14, 15);
 }
 
 .h-style-1{
@@ -1004,10 +1000,10 @@ hr{
 		text-align: center ;
 	}
 	p{
-		font-size: 0.95em;
+		font-size: 1em;
 		//font-weight: 400;
 		position: relative;
-		line-height: 160%;
+		line-height: 150%;
 	}
 	ul:not([class]){
 		text-align: left;

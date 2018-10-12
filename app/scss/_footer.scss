@@ -16,16 +16,36 @@
 	background-repeat: no-repeat;
 	background-position-y: center;
 	background-size: cover;
+	background-color: $color-2;
 }
-.footer-content{
-	.pie-flex-content{
-		flex-wrap: nowrap;
-		@media (max-width: 991px) {
-			flex-wrap: wrap;
-		}
+.footer-menu{
+	ul{
+		column-count: 3;
+		width: 85%;
+		margin: auto;
+		margin-right: 0;
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+	li{
+		width: 100%;
 	}
 }
+.footer-content{
 
+	.align-i-center{
+		min-height: 200px;
+	}
+}
+.socicons{
+	font-size: 20px;
+	li{
+		margin: 0 5px;
+	}
+}
+.copy-content{
+	background-color: $color-5;
+}
 .dev{
 	font-size: 0.9em;
 }
