@@ -8131,6 +8131,9 @@ textarea.form-control {
       height: 100%;
       -webkit-background-size: cover;
       background-size: cover;
+      -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
       background-position: center;
       -webkit-filter: blur(0px) brightness(120%);
       filter: blur(0px) brightness(120%);
@@ -8144,9 +8147,33 @@ textarea.form-control {
       opacity: 1; }
       .bnr-carousel figure.is-selected .img {
         -webkit-filter: blur(0);
-        filter: blur(0); }
+        filter: blur(0);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); }
+  .bnr-carousel h1, .bnr-carousel p, .bnr-carousel .btn-def {
+    opacity: 0;
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease; }
+  .bnr-carousel h1 {
+    -webkit-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px); }
   .bnr-carousel p {
-    line-height: 200%; }
+    line-height: 200%;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px); }
+  .bnr-carousel .btn-def {
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3); }
+  .bnr-carousel .is-selected h1, .bnr-carousel .is-selected p, .bnr-carousel .is-selected .btn-def {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1; }
   .bnr-carousel .container-arrows {
     z-index: 1;
     width: 1170px;
