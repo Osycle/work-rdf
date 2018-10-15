@@ -8642,6 +8642,62 @@ textarea.form-control {
         -ms-transform: translateX(-100%);
         transform: translateX(-100%); } }
 
+.vacancies-accordion .panel-default {
+  border-color: #e09218; }
+
+.vacancies-accordion .panel-heading {
+  background-color: transparent;
+  padding: 0; }
+  .vacancies-accordion .panel-heading h4 {
+    text-transform: none; }
+  .vacancies-accordion .panel-heading .fa {
+    position: absolute;
+    right: 15px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: 14px; }
+  .vacancies-accordion .panel-heading a {
+    display: block;
+    padding: 10px 15px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #e09218; }
+    .vacancies-accordion .panel-heading a:not(.collapsed) {
+      color: white;
+      background-color: #e09218; }
+      .vacancies-accordion .panel-heading a:not(.collapsed) .fa {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1); }
+
+.form-item {
+  border: 1px solid #373435;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 8px 15px; }
+  .form-item::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 1; }
+  .form-item:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.5); }
+  .form-item::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.5); }
+
+.vacancies-form textarea {
+  resize: none;
+  height: 92px; }
+
+.vacancies-form input {
+  height: 37px; }
+
+.vacancies-form input, .vacancies-form textarea {
+  border-color: #e09218; }
+
 /* 
 		_footer.scss
 */

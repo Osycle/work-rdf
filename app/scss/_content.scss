@@ -673,3 +673,63 @@
 
 	}
 }
+
+
+//vacancies
+
+//.vacancies
+.vacancies-accordion{
+	.panel-default{
+		border-color: $color-1;
+	}
+	.panel-heading{
+		background-color: transparent;
+		padding: 0;
+		h4{
+			text-transform: none;
+		}
+		.fa{
+			position: absolute;
+			right: 15px;
+			transform: rotate(180deg);
+			top: 14px;
+		}
+		a{
+			display: block;
+			padding: 10px 15px;
+			transition: all 0.3s ease;
+			border-radius: 5px;
+			border: 1px solid $color-1;
+			&:not(.collapsed){
+				color: white;
+				background-color: $color-1;
+				.fa{
+					transform: scale(1);
+				}
+			}
+		}
+	}
+}
+.form-item{
+	border: 1px solid $color-2;
+	width: 100%;
+	@include placeholder( rgba( black, 0.5 ) )
+	border-radius: 5px;
+	padding: 8px 15px;
+
+}
+
+.vacancies-form{
+
+	textarea{
+		resize: none;
+		height: 92px;
+	}
+	input{
+		height: 37px;
+	}
+	input, textarea{
+		border-color: $color-1;
+	}
+}
+
