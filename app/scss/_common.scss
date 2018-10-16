@@ -909,7 +909,7 @@ h1, h2, h3, h4{
 h1{
 	line-height: 125%;
 	text-transform: uppercase;
-	font-size: em(32, 15);
+	font-size: em(30, 15);
 	margin-bottom: 15px;
 	font-weight: 600;
 	@media (max-width: 430px) {
@@ -1031,19 +1031,6 @@ hr{
 	@extend .clearfix;
 }
 
-
-.entry-content{
-	h1{
-		color: $color-1;
-	}
-	@extend .list-style-1;
-	ul{
-		margin: 15px 0;
-	}
-	h1 + img, h2 + img, h3 + img, h4 + img, h5 + img{
-		margin-top: 0;
-	}
-}
 
 
 

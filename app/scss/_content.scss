@@ -458,12 +458,6 @@
 }
 
 //reviews
-.reviews{
-	.container{
-		padding-top: 45px;
-		padding-bottom: 45px;
-	}
-}
 .reviews-items{
 	.wrapper{
 		width: 85%;
@@ -676,8 +670,6 @@
 
 
 //vacancies
-
-//.vacancies
 .vacancies-accordion{
 	.panel-default{
 		border-color: $color-1;
@@ -711,7 +703,7 @@
 	}
 }
 .form-item{
-	border: 1px solid $color-2;
+	border: 1px solid $color-1;
 	width: 100%;
 	@include placeholder( rgba( black, 0.5 ) )
 	border-radius: 5px;
@@ -720,7 +712,6 @@
 }
 
 .vacancies-form{
-
 	textarea{
 		resize: none;
 		height: 92px;
@@ -728,8 +719,82 @@
 	input{
 		height: 37px;
 	}
-	input, textarea{
-		border-color: $color-1;
+}
+
+
+//partners
+.parnters-form{
+	.textarea-content{
+		position: relative;
+		textarea{
+			height: 208px;
+			resize: none;
+		}
+	}
+}
+.acv-form{
+	.input-content{
+		position: relative;	
+	}
+	label.placeholder{
+		position: absolute;
+		z-index: 1; 
+		transition: 0.3s ease-in-out;
+		top: 10px;
+		font-size: 1em;
+		left: 15px;
+		color: $color-gray-3;
+		pointer-events: none;
+	}
+	.form-item{
+		&:focus, &[filled]{
+			border-color: $color-2;
+			&~label.placeholder{
+				font-size: 0.8em;
+				color: black;
+				transform: translate(-10px, -27px);
+			}
+		}
+	}
+}
+//certifications
+.certifications-items{
+	figure{
+		transition: all 0.3s ease;
+		transform: scale(1);
+		&:hover{
+			transform: translateY(-7px);
+		}
 	}
 }
 
+//showroom
+.showroom-in-items{
+	figure{
+		.wrapper{
+			display: flex;
+		}
+		.img{
+			height: 270px;
+			width: 270px;
+			background-position: center;
+			background-size: cover;
+			//@media (max-width:991px)
+		}
+		h4{
+			margin-top: 0;
+			text-transform: none;
+		}
+		@media (max-width: 991px) {
+			h4{
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+		}
+		@media (min-width: 992px) {
+			.desc-content{
+				padding-left: 15px;
+			}
+		}
+	}
+}
