@@ -42,6 +42,7 @@
 	@media (max-width: 991px) {
 		.productions-carousel{
 			background-position: center;
+			display: none;
 			background-size: cover;
 			bottom: 0;
 			position: relative;
@@ -71,9 +72,6 @@
 	position: relative;
 	background-size: cover;
 	background-position: center center;
-	@media (max-width: 991px) {
-		display: none;
-	}
 	figure{
 		overflow: hidden;
 		height: $slider-height;
@@ -122,11 +120,17 @@
 			opacity: 1;
 		}
 	}
+	.flickity-slider{
+		transform: inherit !important;
+	}
 	.container-arrows{
     z-index: 1;
-    width: 1170px;
+    @extend .container;
     position: absolute;
     @extend .trans-center;
+    @media (max-width:991px) {
+    	width: 90%;
+    }
 	}
 	.carousel-content{
 		.align-i-center{
@@ -139,6 +143,11 @@
 		.flexboxes-item{
 			&:nth-child(1){
 				margin-left: 12.3%;
+			}
+		}
+		@media (max-width: 991px) {
+			.align-i-center{
+				height: calc(100vh - 70px);
 			}
 		}
 	}
@@ -179,9 +188,7 @@
 			}
 		}
 	}
-	.flickity-slider{
-		transform: inherit !important;
-	}
+
 	@media(min-width: 992px) {
 		h1{
 			font-size: 36px;
@@ -190,9 +197,9 @@
 	@media(max-width: 991px) {
 		font-size: 0.9em;
 		figure{
-			height: 200px;
-			.carousel-content{
-				display: none;
+			height: calc(100vh - 70px);
+			.img{
+				height: calc(100vh - 70px);
 			}
 		}
 		.bg-wrapper{
@@ -245,8 +252,8 @@
 			@media(max-width:767px){
 				width: (100/2)+%;
 			}
-			@media(max-width:420px){
-				width: (100/1.5)+%;
+			@media(max-width:510px){
+				width: (100/1)+%;
 			}
 		}
 	}
@@ -290,6 +297,11 @@
 		background-position: center;
 		background-size: cover;
 		height: 350px;
+	}
+	@media (max-width:991px) {
+		.img{
+			height: 280px;
+		}	
 	}
 }
 .short-trip{

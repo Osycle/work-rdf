@@ -65,6 +65,7 @@ $header-min-menu: 70px;
 	height: $header-top-height;
 	background-color: transparent;
 	transition: height 0.3s ease-in-out 0.4s;
+	display: none;
 	@media ( max-width: 991px ){
 		height: 70px;
 		display: block;

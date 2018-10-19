@@ -300,7 +300,7 @@ html{
 		}
 	}
 }
-@media ( max-width: 420px ){
+@media ( max-width: 460px ){
 	.flexboxes-3, .flexboxes-4, .flexboxes-5, .flexboxes-5, .flexboxes-6{
 		figure, .flexboxes-item{
 			flex-basis: (100/1)+%;
@@ -363,78 +363,27 @@ html{
 
 
 
-.text-center{
-	text-align: center;
-}
-.text-left{
-	text-align: left;
-}
-.text-right{
-	text-align: right;
-}
+.text-center 			{text-align: center;}
+.text-left 				{text-align: left;}
+.text-right 			{text-align: right;}
+.text-justify 		{text-align: justify;}
 
-.text-center-impt{
-	text-align: center !important;
-}
-.text-left-impt{
-	text-align: left !important;
-}
-.text-right-impt{
-	text-align: right !important;
-}
-
-.float-none{
-	float: none;
-}
-.float-left{
-	float: left;
-}
-.float-right{
-	float: right;
-}
+.float-none 			{float: none;}
+.float-left 			{float: left;}
+.float-right 			{float: right;}
 
 
 @media (max-width: 991px){
 
+	.float-left-sm 			{float: left;}
+	.float-none-sm 			{float: none;}
+	.float-right-sm 		{float: right;}
 
-	.float-left-sm{
-		float: left;
-	}
-	.float-none-sm{
-		float: none;
-	}
-	.float-right-sm{
-		float: right;
-	}
-	.float-none-sm-impt{
-		float: none !important;
-	}
-	.float-left-sm-impt{
-		float: left !important;
-	}
-	.float-right-sm-impt{
-		float: right !important;
-	}
 
-	.text-left-sm{
-		text-align: left ;
-	}
-	.text-center-sm{
-		text-align: center ;
-	}
-	.text-right-sm{
-		text-align: right ;
-	}
-
-	.text-left-sm-impt{
-		text-align: left !important;
-	}
-	.text-center-sm-impt{
-		text-align: center !important;
-	}
-	.text-right-sm-impt{
-		text-align: right !important;
-	}
+	.text-left-sm 			{text-align: left ;}
+	.text-center-sm 		{text-align: center ;}
+	.text-right-sm 			{text-align: right ;}	
+	.text-justify-sm 		{text-align: justify;}
 
 
 }
@@ -442,34 +391,14 @@ html{
 
 @media (min-width: 992px){
 
-	.float-left-md{
-		float: left;
-	}
-	.float-none-md{
-		float: none;
-	}
-	.float-right-md{
-		float: right;
-	}
-	.float-none-md-impt{
-		float: none !important;
-	}
-	.float-left-md-impt{
-		float: left !important;
-	}
+	.float-left-md 			{float: left;}
+	.float-none-md 			{float: none;}
+	.float-right-md 		{float: right;}
 
-	.float-right-md-impt{
-		float: right !important;
-	}
-
-
-	.text-left-md 				{text-align: left ;}
-	.text-left-md-impt		{text-align: left !important;}
-	.text-center-md 			{text-align: center;}
-	.text-center-md-impt	{text-align: center !important;}
-	.text-right-md 				{text-align: right;}
-	.text-right-md-impt		{text-align: right !important;}
-	
+	.text-left-md 			{text-align: left ;}
+	.text-center-md 		{text-align: center;}
+	.text-right-md 			{text-align: right;}
+	.text-justify-md		{text-align: justify;}
 
 	@for $i from 12 through 1 {
 
