@@ -7,7 +7,7 @@
 										 ---HEADER---
 */
 
-$header-top-height: 130px; 
+$header-top-height: 100px; 
 $header-middle-height: 145px; 
 $header-bottom-height: 85px;
 $header-min-menu: 70px;
@@ -65,7 +65,6 @@ $header-min-menu: 70px;
 	height: $header-top-height;
 	background-color: transparent;
 	transition: height 0.3s ease-in-out 0.4s;
-	display: none;
 	@media ( max-width: 991px ){
 		height: 70px;
 		display: block;
@@ -80,7 +79,8 @@ $header-min-menu: 70px;
 	}
 }
 .header-top{
-	//background-color: $color-3;	
+	background-color: white;
+	color: black;
 	//position: fixed;
 	width: 100%;
 	.btn-def{
@@ -118,7 +118,6 @@ $header-min-menu: 70px;
 	}
 	&.scrolled, &.header-pages{
 		.header-top{
-			background-color: #975e0b;
 			box-shadow: 0px 5px 20px -10px black;
 		}
 		.header-top-content{
@@ -337,7 +336,7 @@ ul[class*="sub"]{
 	z-index: 100;
 	color: white;
 	box-shadow: 0 0 20px 0 black;
-	background-color: $color-2;
+	background-color: white;
 	.min-menu-logo{
 		padding: 12px 0;
 		width: 100%;
@@ -468,7 +467,7 @@ ul[class*="sub"]{
 }
 .icon-bar{
 	width: 100%;
-	background-color: white;
+	background-color: $color-2;
 	height: 1px;
 	position: relative;
 	display: block;

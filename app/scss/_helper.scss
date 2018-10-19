@@ -266,7 +266,7 @@ html{
 	figure, .flexboxes-item{
 		display: inline-block;
 	}
-	&:not(.serried){
+	&:not(.serried):not(.flexboxes-item){
 		margin-left: -15px;
 		margin-right: -15px;
 		figure, .flexboxes-item{

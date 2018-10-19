@@ -29,6 +29,9 @@
 	}
 	li{
 		width: 100%;
+		&:hover{
+			color: #5782cb;
+		}
 	}
 }
 .footer-content{
@@ -44,7 +47,8 @@
 	}
 }
 .copy-content{
-	background-color: $color-5;
+	background-color: $color-1;
+	color: white;
 }
 .dev{
 	font-size: 0.9em;
