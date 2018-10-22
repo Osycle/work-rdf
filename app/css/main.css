@@ -8074,12 +8074,14 @@ textarea.form-control {
   @media (max-width: 991px) {
     .bnr-slider .productions-carousel {
       background-position: center;
-      display: none;
       -webkit-background-size: cover;
       background-size: cover;
       bottom: 0;
       position: relative;
-      background-color: #40a2db; }
+      background-color: #40a2db;
+      background: transparent !important;
+      position: absolute;
+      bottom: 0; }
     .bnr-slider .productions-items {
       -webkit-transform: scale(1);
       -ms-transform: scale(1);
@@ -8089,25 +8091,21 @@ textarea.form-control {
       left: 0;
       bottom: 0;
       letter-spacing: -5px;
-      margin-left: -2.5%;
-      margin-right: -2.5%; }
+      margin-left: -0.83333%;
+      margin-right: -0.83333%; }
       .bnr-slider .productions-items * {
         letter-spacing: 0; }
       .bnr-slider .productions-items figure, .bnr-slider .productions-items .boxes-cell {
-        margin-left: 2.5%;
-        margin-right: 2.5%;
-        width: 45%; } }
-  @media (max-width: 360px) {
-    .bnr-slider .productions-items {
-      letter-spacing: -5px;
-      margin-left: -5%;
-      margin-right: -5%; }
-      .bnr-slider .productions-items * {
-        letter-spacing: 0; }
-      .bnr-slider .productions-items figure, .bnr-slider .productions-items .boxes-cell {
-        margin-left: 5%;
-        margin-right: 5%;
-        width: 90%; } }
+        margin-left: 0.83333%;
+        margin-right: 0.83333%;
+        width: 15%; }
+      .bnr-slider .productions-items h5 {
+        display: none; }
+      .bnr-slider .productions-items .img {
+        height: 60px;
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-position: bottom; } }
 
 .bnr-carousel {
   background-color: white;

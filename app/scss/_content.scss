@@ -42,11 +42,13 @@
 	@media (max-width: 991px) {
 		.productions-carousel{
 			background-position: center;
-			display: none;
 			background-size: cover;
 			bottom: 0;
 			position: relative;
 			background-color: $color-3;
+			background: transparent !important;
+			position: absolute;
+			bottom: 0;
 		}
 		.productions-items{
 			transform: scale(1);
@@ -54,15 +56,19 @@
 			position: relative;
 			left: 0;
 			bottom: 0;
-			@include boxes-items( 90, 2 );
+			@include boxes-items( 90, 6 );
+			h5{
+				display: none;
+			}
+			.img{
+				height: 60px;
+				background-size: contain;
+				background-position: bottom;
+			}
 
 		}
 	}
-	@media (max-width: 360px) {
-		.productions-items{
-			@include boxes-items( 90, 1 );
-		}
-	}
+
 }
 
 .bnr-carousel{
