@@ -3388,24 +3388,24 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .bnr-carousel .container-arrows {
+.container, .bnr-carousel .container-arrows, .fancybox-caption {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .bnr-carousel .container-arrows:before, .container:after, .bnr-carousel .container-arrows:after {
+  .container:before, .bnr-carousel .container-arrows:before, .fancybox-caption:before, .container:after, .bnr-carousel .container-arrows:after, .fancybox-caption:after {
     content: " ";
     display: table; }
-  .container:after, .bnr-carousel .container-arrows:after {
+  .container:after, .bnr-carousel .container-arrows:after, .fancybox-caption:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container, .bnr-carousel .container-arrows {
+    .container, .bnr-carousel .container-arrows, .fancybox-caption {
       width: 780px; } }
   @media (min-width: 992px) {
-    .container, .bnr-carousel .container-arrows {
+    .container, .bnr-carousel .container-arrows, .fancybox-caption {
       width: 1000px; } }
   @media (min-width: 1200px) {
-    .container, .bnr-carousel .container-arrows {
+    .container, .bnr-carousel .container-arrows, .fancybox-caption {
       width: 1200px; } }
 
 .container-fluid {
@@ -6659,7 +6659,7 @@ table {
   color: white; }
 
 .color-black {
-  color: #15181e; }
+  color: #000; }
 
 .color-gray-1 {
   color: #E1E1E1; }
@@ -8176,17 +8176,28 @@ textarea.form-control {
     transform: inherit !important; }
   .bnr-carousel .container-arrows {
     z-index: 1;
-    position: absolute; }
+    position: absolute;
+    -webkit-transform: translate(-50%, 50px) !important;
+    -ms-transform: translate(-50%, 50px) !important;
+    transform: translate(-50%, 50px) !important; }
     @media (max-width: 991px) {
       .bnr-carousel .container-arrows {
         width: 90%; } }
   .bnr-carousel .carousel-content .align-i-center {
-    height: 770px; }
-  .bnr-carousel .carousel-content .m-auto {
+    height: 770px;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    bottom: 170px; }
+  .bnr-carousel .carousel-content .wrapper {
     background: -webkit-radial-gradient(rgba(244, 223, 193, 0.6), rgba(255, 255, 255, 0));
     background: -o-radial-gradient(rgba(244, 223, 193, 0.6), rgba(255, 255, 255, 0));
     background: radial-gradient(rgba(244, 223, 193, 0.6), rgba(255, 255, 255, 0));
     padding: 30px 20px; }
+    @media (min-width: 992px) {
+      .bnr-carousel .carousel-content .wrapper {
+        padding-bottom: 150px; } }
   .bnr-carousel .carousel-content .flexboxes-item:nth-child(1) {
     margin-left: 12.3%; }
   @media (max-width: 991px) {
@@ -8246,6 +8257,13 @@ textarea.form-control {
   @media (max-width: 370px) {
     .bnr-carousel {
       word-wrap: break-word; } }
+
+.workinfo-content {
+  bottom: 170px;
+  position: relative; }
+  @media (max-width: 991px) {
+    .workinfo-content {
+      display: none; } }
 
 .col-cut {
   margin-left: -15px;
@@ -8642,17 +8660,17 @@ textarea.form-control {
   .news-article .article-content {
     padding-bottom: 70px; } }
 
-.contacts-info .container, .contacts-info .bnr-carousel .container-arrows, .bnr-carousel .contacts-info .container-arrows {
+.contacts-info .container, .contacts-info .bnr-carousel .container-arrows, .bnr-carousel .contacts-info .container-arrows, .contacts-info .fancybox-caption {
   padding-top: 45px;
   padding-bottom: 30px; }
 
 @media (min-width: 992px) {
-  .about .container, .about .bnr-carousel .container-arrows, .bnr-carousel .about .container-arrows {
+  .about .container, .about .bnr-carousel .container-arrows, .bnr-carousel .about .container-arrows, .about .fancybox-caption {
     padding-top: 30px;
     padding-bottom: 15px; } }
 
 @media (min-width: 992px) {
-  .advantages .short-advantages .container, .advantages .short-advantages .bnr-carousel .container-arrows, .bnr-carousel .advantages .short-advantages .container-arrows {
+  .advantages .short-advantages .container, .advantages .short-advantages .bnr-carousel .container-arrows, .bnr-carousel .advantages .short-advantages .container-arrows, .advantages .short-advantages .fancybox-caption {
     padding-bottom: 60px; } }
 
 @media (max-width: 991px) {
@@ -8825,6 +8843,29 @@ textarea.form-control {
 @media (min-width: 992px) {
   .showroom-in-items figure .desc-content {
     padding-left: 15px; } }
+
+.services-article-items .img-content {
+  overflow: hidden;
+  position: relative; }
+
+.services-article-items .img {
+  height: 200px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-position: center; }
+
+.services-article-items figure:hover .img {
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95); }
+
+.services-article-items figure:hover .img-content:before {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1); }
 
 /* 
 		_footer.scss
@@ -9060,6 +9101,9 @@ textarea.form-control {
       -ms-transform: scale(1.4);
       transform: scale(1.4);
       background-color: #022561; }
+
+.fancybox-caption {
+  font-family: "Open Sans"; }
 
 .prev-next-dots .carousel-prev-next {
   position: relative; }

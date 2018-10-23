@@ -221,6 +221,10 @@
 		}
 	}
 }
+.fancybox-caption{
+	@extend .container;
+	font-family: $font-family-1;
+}
 .prev-next-dots{
 	.carousel-prev-next{
 		position: relative;

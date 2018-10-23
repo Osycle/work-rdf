@@ -173,7 +173,7 @@
 				initialIndex: 0,
 				friction: 1,
 				selectedAttraction: 1,
-				prevNextButtons: true,
+				prevNextButtons: !checkSm(),
 				draggable: false,
 				wrapAround: true,
 				pageDots: false,
@@ -218,12 +218,13 @@
 	      prevNextButtons: true,
 	      pageDots: false,
 	      percentPosition: true,
-	      draggable: false,
+	      draggable: checkSm(),
 	      adaptiveHeight: true, 
 	      wrapAround: false,
 	      contain: false,
 	      cellAlign: 'center'
 	    });
+
   	if($('.short-trip-carousel .carousel-items figure').length > 4)
 			$('.short-trip-carousel .carousel-items').flickity({
 	      imagesLoaded: true,
@@ -258,7 +259,6 @@
         percentPosition: true,
         cellAlign: 'center'
       });
-
 
     //short-partners-carousel
     if ($(".short-partners-carousel .carousel-items figure").length > 8 || checkSm())
