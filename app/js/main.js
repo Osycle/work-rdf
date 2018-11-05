@@ -225,7 +225,7 @@
 	      cellAlign: 'center'
 	    });
 
-  	if($('.short-trip-carousel .carousel-items figure').length > 4)
+/*  	if($('.short-trip-carousel .carousel-items figure').length > 4)
 			$('.short-trip-carousel .carousel-items').flickity({
 	      imagesLoaded: true,
 	      autoPlay: 3000,
@@ -241,7 +241,7 @@
 	      contain: false,
 	      percentPosition: true,
 	      cellAlign: 'center'
-	    });
+	    });*/
 
       $('.short-reviews-carousel .carousel-items').flickity({
         imagesLoaded: true,

@@ -299,7 +299,7 @@
 			transition: all 0.7s linear, filter 0.5s steps(30);
 		}
 		&:hover{
-			box-shadow: 0 15px 35px -5px rgba(black, 0.7);
+			//box-shadow: 0 15px 35px -5px rgba(black, 0.7);
 			.img{
 				transform: scale(1.1);
 				filter: contrast(120%) blur(5px);
@@ -308,6 +308,7 @@
 	}
 	.cell-hover{
 		color: white;
+		opacity: 1;
 		background-color: transparent;
 		padding: 0;
 		align-items: flex-end;
