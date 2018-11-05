@@ -8278,7 +8278,8 @@ textarea.form-control {
     left: 30px; }
 
 .short-trip-items {
-  text-align: center; }
+  text-align: center;
+  font-size: 0.95em; }
   .short-trip-items.boxes figure {
     position: relative;
     text-align: left;
