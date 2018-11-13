@@ -274,7 +274,6 @@
 }
 .short-trip-items{
 	text-align: center;
-	font-size: 0.95em;
 	&.boxes{
 		figure{
 			position: relative;
@@ -300,7 +299,7 @@
 			transition: all 0.7s linear, filter 0.5s steps(30);
 		}
 		&:hover{
-			//box-shadow: 0 15px 35px -5px rgba(black, 0.7);
+			box-shadow: 0 15px 35px -5px rgba(black, 0.7);
 			.img{
 				transform: scale(1.1);
 				filter: contrast(120%) blur(5px);
@@ -309,7 +308,6 @@
 	}
 	.cell-hover{
 		color: white;
-		opacity: 1;
 		background-color: transparent;
 		padding: 0;
 		align-items: flex-end;
@@ -784,6 +782,16 @@ $color-news-type-3: #40a2db;
 
 
 //vacancies
+.vacancies{
+	.form-item{
+		border: 1px solid $color-1;
+		width: 100%;
+		@include placeholder( rgba( black, 0.5 ) );
+		border-radius: 5px;
+		padding: 8px 15px;
+
+	}
+}
 .vacancies-accordion{
 	.panel-default{
 		border-color: $color-1;
@@ -816,14 +824,7 @@ $color-news-type-3: #40a2db;
 		}
 	}
 }
-.form-item{
-	border: 1px solid $color-1;
-	width: 100%;
-	@include placeholder( rgba( black, 0.5 ) )
-	border-radius: 5px;
-	padding: 8px 15px;
 
-}
 
 .vacancies-form{
 	textarea{
@@ -837,6 +838,9 @@ $color-news-type-3: #40a2db;
 
 
 //partners
+.partners{
+
+}
 .parnters-form{
 	.textarea-content{
 		position: relative;
@@ -844,6 +848,13 @@ $color-news-type-3: #40a2db;
 			height: 208px;
 			resize: none;
 		}
+	}
+	.form-item{
+		border: 1px solid $color-1;
+		width: 100%;
+		@include placeholder( rgba( black, 0.5 ) );
+		border-radius: 5px;
+		padding: 8px 15px;
 	}
 }
 .acv-form{

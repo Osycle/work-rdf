@@ -505,7 +505,12 @@ textarea.form-control{
 }
 
 
-
+.form-checkin{
+	background-color: lighten($color-gray-1, 5%);
+	input{
+		background-color: white;
+	}
+}
 
 //search nav
 .search-nav-content, .input-btnin{

@@ -1044,7 +1044,7 @@ hr{
 	border: 0px solid $color-gray-2;
 	//border-bottom-color: white;
 	background-color: rgba(white, 0.05);
-	//border-radius: 30px;
+	border-radius: 0;
 	&:not([class*='color-']){
 		color: inherit;
 		color: currentColor;
