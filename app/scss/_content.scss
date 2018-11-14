@@ -292,11 +292,11 @@
 	}
 	.hover-content{
 		overflow: hidden;
-		transition: all 0.7s linear;
+		transition: all 0.4s linear;
 		box-shadow: 0 15px 35px -5px rgba(black, 0.0);
 		//padding-top: 1px;
 		.img, .cell-hover{
-			transition: all 0.7s linear, filter 0.5s steps(30);
+			transition: all 0.4s linear, filter 0.5s steps(15);
 		}
 		&:hover{
 			box-shadow: 0 15px 35px -5px rgba(black, 0.7);
@@ -304,15 +304,22 @@
 				transform: scale(1.1);
 				filter: contrast(120%) blur(5px);
 			}
+			.cell-hover>div{
+				height: 100%;
+			}
 		}
 	}
 	.cell-hover{
 		color: white;
 		background-color: transparent;
-		padding: 0;
+		padding: 10px;
+		opacity: 1;
 		align-items: flex-end;
 		&>div{
-			background-color: rgba(black, 0.4);
+			overflow: hidden;
+			transition: 0.4s;
+			height: 25%;
+			background-color: rgba(black, 0.7);
 			padding: 15px 30px;
 		}
 	}

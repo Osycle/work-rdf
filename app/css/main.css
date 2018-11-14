@@ -8306,17 +8306,17 @@ textarea.form-control {
         width: 100%; } }
   .short-trip-items .hover-content {
     overflow: hidden;
-    -webkit-transition: all 0.7s linear;
-    -o-transition: all 0.7s linear;
-    transition: all 0.7s linear;
+    -webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
     -webkit-box-shadow: 0 15px 35px -5px transparent;
     box-shadow: 0 15px 35px -5px transparent; }
     .short-trip-items .hover-content .img, .short-trip-items .hover-content .cell-hover {
-      -webkit-transition: all 0.7s linear, -webkit-filter 0.5s steps(30);
-      transition: all 0.7s linear, -webkit-filter 0.5s steps(30);
-      -o-transition: all 0.7s linear, filter 0.5s steps(30);
-      transition: all 0.7s linear, filter 0.5s steps(30);
-      transition: all 0.7s linear, filter 0.5s steps(30), -webkit-filter 0.5s steps(30); }
+      -webkit-transition: all 0.4s linear, -webkit-filter 0.5s steps(15);
+      transition: all 0.4s linear, -webkit-filter 0.5s steps(15);
+      -o-transition: all 0.4s linear, filter 0.5s steps(15);
+      transition: all 0.4s linear, filter 0.5s steps(15);
+      transition: all 0.4s linear, filter 0.5s steps(15), -webkit-filter 0.5s steps(15); }
     .short-trip-items .hover-content:hover {
       -webkit-box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.7);
       box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.7); }
@@ -8326,16 +8326,24 @@ textarea.form-control {
         transform: scale(1.1);
         -webkit-filter: contrast(120%) blur(5px);
         filter: contrast(120%) blur(5px); }
+      .short-trip-items .hover-content:hover .cell-hover > div {
+        height: 100%; }
   .short-trip-items .cell-hover {
     color: white;
     background-color: transparent;
-    padding: 0;
+    padding: 10px;
+    opacity: 1;
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end; }
     .short-trip-items .cell-hover > div {
-      background-color: rgba(0, 0, 0, 0.4);
+      overflow: hidden;
+      -webkit-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s;
+      height: 25%;
+      background-color: rgba(0, 0, 0, 0.7);
       padding: 15px 30px; }
   .short-trip-items .desc-content {
     width: 100%;
