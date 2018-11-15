@@ -669,5 +669,18 @@ textarea.form-control{
 
 
 
-
-
+.feedback{
+	position: fixed;
+	right:  30px;
+	z-index: 150;
+}
+.feedback-sm{
+	display: none;
+	@media (max-width: 991px) {
+		display: block;
+		position: fixed;
+		right:  0;
+		bottom:  15px;
+		z-index: 150;
+	}
+}

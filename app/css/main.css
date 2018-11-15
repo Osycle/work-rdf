@@ -8045,6 +8045,21 @@ textarea.form-control {
     padding-bottom: 15px;
     border-bottom: 1px dotted gray; } }
 
+.feedback {
+  position: fixed;
+  right: 30px;
+  z-index: 150; }
+
+.feedback-sm {
+  display: none; }
+  @media (max-width: 991px) {
+    .feedback-sm {
+      display: block;
+      position: fixed;
+      right: 0;
+      bottom: 15px;
+      z-index: 150; } }
+
 /*
 	_content.css
 */
@@ -8678,6 +8693,12 @@ textarea.form-control {
 .contacts-info .container, .contacts-info .bnr-carousel .container-arrows, .bnr-carousel .contacts-info .container-arrows, .contacts-info .fancybox-caption {
   padding-top: 45px;
   padding-bottom: 30px; }
+
+.contacts-info-items .img {
+  height: 41px;
+  background-position: center;
+  -webkit-background-size: contain;
+  background-size: contain; }
 
 @media (min-width: 992px) {
   .about .container, .about .bnr-carousel .container-arrows, .bnr-carousel .about .container-arrows, .about .fancybox-caption {

@@ -695,6 +695,13 @@ $color-news-type-3: #40a2db;
 		padding-bottom: 30px;
 	}
 }
+.contacts-info-items{
+	.img{
+		height: 41px;
+		background-position: center;
+		background-size: contain;
+	}
+}
 //about
 .about{
 	.container{
