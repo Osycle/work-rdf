@@ -8197,7 +8197,7 @@ textarea.form-control {
     -ms-transform: inherit !important;
     transform: inherit !important; }
   .bnr-carousel .container-arrows {
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     -webkit-transform: translate(-50%, 50px) !important;
     -ms-transform: translate(-50%, 50px) !important;

@@ -130,7 +130,7 @@
 		transform: inherit !important;
 	}
 	.container-arrows{
-    z-index: 1;
+    z-index: 3;
     @extend .container;
     position: absolute;
     @extend .trans-center;
