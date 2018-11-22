@@ -8086,12 +8086,12 @@ textarea.form-control {
     .bnr-slider .productions-carousel h5 {
       text-transform: uppercase; }
   @media (min-width: 992px) {
-    .bnr-slider figure {
+    .bnr-slider .productions-carousel figure {
       opacity: 0.3;
       -webkit-transition: 0.2s;
       -o-transition: 0.2s;
       transition: 0.2s; }
-      .bnr-slider figure:hover {
+      .bnr-slider .productions-carousel figure:hover {
         opacity: 1; } }
   @media (max-width: 991px) {
     .bnr-slider .productions-carousel {
@@ -8138,12 +8138,7 @@ textarea.form-control {
   background-position: center center; }
   .bnr-carousel figure {
     overflow: hidden;
-    height: 770px;
-    -webkit-transition: all 2s ease;
-    -o-transition: all 2s ease;
-    transition: all 2s ease;
-    left: 0 !important;
-    opacity: 0; }
+    height: 770px; }
     .bnr-carousel figure .img {
       position: absolute;
       height: 100%;
@@ -8161,7 +8156,6 @@ textarea.form-control {
       transition: transform 1.2s ease, opacity 1s ease-in-out, filter 1s linear 0.5s;
       transition: transform 1.2s ease, opacity 1s ease-in-out, filter 1s linear 0.5s, -webkit-transform 1.2s ease, -webkit-filter 1s linear 0.5s; }
     .bnr-carousel figure.is-selected {
-      z-index: 1;
       opacity: 1; }
       .bnr-carousel figure.is-selected .img {
         -webkit-filter: blur(0);
@@ -8192,10 +8186,6 @@ textarea.form-control {
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 1; }
-  .bnr-carousel .flickity-slider {
-    -webkit-transform: inherit !important;
-    -ms-transform: inherit !important;
-    transform: inherit !important; }
   .bnr-carousel .container-arrows {
     z-index: 3;
     position: absolute;
@@ -8360,6 +8350,10 @@ textarea.form-control {
       height: 25%;
       background-color: rgba(0, 0, 0, 0.7);
       padding: 15px 30px; }
+      @media (max-width: 991px) {
+        .short-trip-items .cell-hover > div {
+          padding: 10px 30px;
+          margin-bottom: 25px; } }
   .short-trip-items .desc-content {
     width: 100%;
     position: absolute;
