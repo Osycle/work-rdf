@@ -7621,6 +7621,8 @@ label {
 .menu {
   font-weight: 500;
   position: relative; }
+  .menu nav {
+    margin-right: -10px; }
   .menu ul:not([class*="sub-menu"]) > li {
     display: inline-block;
     position: relative;
@@ -8350,10 +8352,6 @@ textarea.form-control {
       height: 25%;
       background-color: rgba(0, 0, 0, 0.7);
       padding: 15px 30px; }
-      @media (max-width: 991px) {
-        .short-trip-items .cell-hover > div {
-          padding: 10px 30px;
-          margin-bottom: 25px; } }
   .short-trip-items .desc-content {
     width: 100%;
     position: absolute;

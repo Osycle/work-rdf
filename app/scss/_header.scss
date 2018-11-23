@@ -157,7 +157,9 @@ $header-min-menu: 70px;
 .menu{
 	font-weight: 500;
 	position: relative;
-
+	nav{
+		margin-right: -10px;
+	}
 	ul:not([class*="sub-menu"]){
 		@extend .letter-none;
 		& > li{

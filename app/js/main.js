@@ -225,7 +225,7 @@
 	      cellAlign: 'center'
 	    });
 
-  	if($('.short-trip-carousel .carousel-items figure').length > 4)
+  	if($('.short-trip-carousel .carousel-items figure').length > 4 )
 			$('.short-trip-carousel .carousel-items').flickity({
 	      imagesLoaded: true,
 	      autoPlay: 3000,
@@ -234,10 +234,10 @@
 	      arrowShape: arrowStyle,
 	      initialIndex: 0,
 	      prevNextButtons: checkSm(),
-	      draggable: checkSm(),
+	      draggable: false,
 	      adaptiveHeight: true, 
 	      wrapAround: true,
-	      pageDots: checkSm(),
+	      pageDots: false,
 	      contain: false,
 	      percentPosition: true,
 	      cellAlign: 'center'
